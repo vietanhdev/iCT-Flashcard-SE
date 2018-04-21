@@ -1,0 +1,51 @@
+<div class="my-3 p-3 bg-white rounded box-shadow">
+    <h3 class="text-primary d-flex border-bottom border-gray pb-2 mb-2"><strong>Tra từ</strong></h3>
+
+    
+    <div class="input-group col-xs-12 col-md-8">
+        <input id="dict-lookup-input" type="text" class="form-control elm-no-outline" placeholder="Gõ từ cần tra và Enter để tra từ" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary dropdown-toggle elm-no-outline" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anh-Việt</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Anh-Việt</a>
+            </div>
+        </div>
+        <div class="input-group-append">
+            <button id="btn-lookup" class="btn btn-primary elm-no-outline" type="button">Tra từ</button>
+        </div>
+
+    </div>
+
+    <div id="meaning-wrapper" class="pt-3 pl-3">
+            
+        <h3 style="display:inline" class="word text-primary border-bottom border-gray">hello</h3>
+        <span style="display:inline" class="ipapron text-secondary">/hə'lou/ (halloa) /hə'lou/ (hello) /'he'lou/</span>
+        <button style="display:inline;" type="button" class="btn btn-outline-dark btn-sm">
+            <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+            Tạo flashcard
+        </button>
+        <div>
+            <button class="btn btn-light" onclick='responsiveVoice.speak("hello", "UK English Female");' >🔊 UK</button>
+            <button class="btn btn-light" onclick='responsiveVoice.speak("hello", "US English Female");' >🔊 US</button>
+        </div>
+        
+        
+        <p class="meaning"><pre>
+*  thán từ
+- chào anh!, chào chị!
+- này, này
+- ô này! (tỏ ý ngạc nhiên)
+*  danh từ
+- tiếng chào
+- tiếng gọi "này, này" !
+- tiếng kêu ô này "! (tỏ ý ngạc nhiên)
+*  nội động từ
+- chào
+- gọi "này, này" 
+- kêu "ô này" (tỏ ý ngạc nhiên)
+        </pre>  
+        </p>
+    </div>
+
+</div>
+<script src="assets/js/dictionary-page.js"></script>

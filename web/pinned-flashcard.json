@@ -1,0 +1,38 @@
+[
+    {
+        "title": "frog",
+        "ipapron": "/frɒg, frɔg/",
+        "content": "Con ếch",
+        "image": "frog.jpg"
+    },
+    {
+        "title": "tiger",
+        "ipapron": "/'taigə[r]/",
+        "content": "con hổ, con cọp",
+        "image": "tiger.jpg"
+    },
+    {
+        "title": "mouse",
+        "ipapron": "/maʊs/",
+        "content": "Con chuột",
+        "image": "mouse.jpg"
+    },
+    {
+        "title": "buffalo",
+        "ipapron": "/'bʌfələʊ/",
+        "content": "Con trâu",
+        "image": "buffalo.png"
+    },
+    {
+        "title": "Frog",
+        "ipapron": "/frɒg, frɔg/",
+        "content": "Con ếch",
+        "image": "frog.jpg"
+    },
+    {
+        "title": "Frog",
+        "ipapron": "/frɒg, frɔg/",
+        "content": "Con ếch",
+        "image": "frog.jpg"
+    }
+]

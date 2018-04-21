@@ -1,0 +1,159 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iCT Flashcard</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+	
+	<!-- Icon font -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Slider lib -->
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.2/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="assets/OwlCarousel2-2.3.2/assets/owl.theme.default.min.css"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Jquery Autocompelete -->
+    <link rel="stylesheet" href="assets/css/autocomplete.css">
+
+	<!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Jquery -->
+    <script
+  src="assets/jquery-3.3.1.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <nav id="main-nav" class="navbar navbar-expand-md align-items-center p-2 text-white-50 box-shadow">
+        <img class="mr-3 p-1" style="background: #fff;" src="assets/logo.svg" alt="" width="32" height="32">
+		<div class="lh-100">
+          <h3 class="mb-0 text-white lh-100">iCT Flashcard</h3>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-menu">
+            <button  class="navbar-toggler btn btn-lg btn-light btn-outline-dark float-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-menu" aria-controls="navbar-collapse-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 d-flex">
+                <a href="javascript:void(0)" onclick="NaviGoto('home')" class="btn btn-outline-dark btn-active ml-1" role="button">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    Dashboard
+                </a>
+                <a href="javascript:void(0)" onclick="NaviGoto('dictionary')" class="btn btn-outline-dark btn-active ml-1" role="button">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    Từ điển
+                </a>
+                <a href="javascript:void(0)" onclick="NaviGoto('user')" class="text-dark p-2">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    Frog OpOp
+                </a>
+            </ul>
+
+            <div class="container d-block d-md-none">
+                <div class="row">
+                    <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                            <button type="button" class="dashboard-main-function btn btn-primary btn-lg p-2 m-2"  onclick="NaviGoto('review-card-collection')">
+                                <i class="fa fa-leanpub" aria-hidden="true"></i>
+                                Ôn tập
+                            </button>
+                    </div>
+                    <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                            <button type="button" class="dashboard-main-function btn btn-success btn-lg p-2 m-2" onclick="NaviGoto('game')">
+                                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                                Flashcard Game
+                            </button>
+                    </div>
+                    <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                            <button type="button" class="dashboard-main-function btn btn-warning btn-lg p-2 m-2" onclick="NaviGoto('view-card-collection')"></button>
+                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                                Quản lí Flashcard
+                            </button>
+                    </div>
+                    <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                            <button type="button" class="dashboard-main-function btn btn-info btn-lg p-2 m-2" onclick="NaviGoto('card-collections')">
+                                <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                                Thêm nhanh Flashcard
+                            </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <button  class="navbar-toggler btn btn-lg btn-light btn-outline-dark ml-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse-menu" aria-controls="navbar-collapse-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+		
+    </nav>
+
+    
+    <main role="main" class="container mt-0" style="max-width: 1000px;">
+        
+      <div id="page-content-ajax">
+	  </div>
+	  
+
+      <div class="container my-3 p-3 bg-white rounded box-shadow">
+            <div class="row">
+                <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                    <button type="button" class="dashboard-main-function btn btn-primary btn-lg p-2 m-2"  onclick="NaviGoto('review-card-collection')">
+                        <i class="fa fa-leanpub" aria-hidden="true"></i>
+                        Ôn tập
+                    </button>
+                </div>
+                <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                        <button type="button" class="dashboard-main-function btn btn-success btn-lg p-2 m-2" onclick="NaviGoto('game')">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i>
+                            Flashcard Game
+                        </button>
+                </div>
+                <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                        <button type="button" class="dashboard-main-function btn btn-warning btn-lg p-2 m-2" onclick="NaviGoto('view-card-collection')">
+                            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                            Quản lí Flashcard
+                        </button>
+                </div>
+                <div class="dashboard-btn-wrapper col-sm-6 col-md-3 pb-1">
+                        <button type="button" class="dashboard-main-function btn btn-info btn-lg p-2 m-2" onclick="NaviGoto('card-collections')">
+                            <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                            Thêm nhanh Flashcard
+                        </button>
+                </div>
+            </div>
+      </div>
+
+      <footer>
+          <p>Developed by ICT K60 Team X<br>
+            Logo made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+      </footer>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="assets/bootstrap/js/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/OwlCarousel2-2.3.2/owl.carousel.min.js"></script>
+
+    <script src="assets/js/URI.min.js"></script>
+    <script
+  src="assets/js/navi.js"></script>
+
+    <script src="assets/js/jquery-ui-autocomplete.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  </body>
+</html>

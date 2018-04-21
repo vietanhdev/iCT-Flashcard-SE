@@ -1,0 +1,186 @@
+/* 
+GENERAL STYLES
+=================================================================  
+*/
+
+* {
+    font-family: 'Cabin', sans-serif;
+}
+
+body {
+    background: #F7F7F7;
+}
+
+/* Main navbar */
+#main-nav {
+    background: #32cdff;
+}
+
+footer {
+    color: #555;
+}
+
+
+.text-white-50 { color: rgba(255, 255, 255, .5); }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.lh-100 { line-height: 1; }
+.lh-125 { line-height: 1.25; }
+.lh-150 { line-height: 1.5; }
+
+.btn-active {
+    background: #f8f9fa;
+    color: #555;
+}
+
+.elm-no-outline:focus {
+    outline: none;
+}
+
+
+/* 
+HOMEPAGE
+=================================================================  
+*/
+.dashboard-main-function {
+    width: 100%;
+    height: 100%;
+    white-space: normal;
+}
+.dashboard-main-function i {
+    font-size: 2rem;
+}
+
+
+.flashcard {
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+.flashcard.hover .flip {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.flashcard,
+.flashcard .card,
+.flashcard .front,
+.flashcard .back {
+    width: 210px;
+    min-height: 340px;
+    background: #fff;
+}
+.flashcard .card .card-footer {
+    background: #fefefe;
+}
+.flashcard .card img {
+    border-bottom: 1px solid #eee;
+}
+
+  
+.flashcard .flip {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
+}
+  
+.flashcard .front,
+.flashcard .back {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flashcard .front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+}
+
+.flashcard .back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.flashcard .back .card {
+    padding: 0.5rem;
+}
+  
+
+
+/* equal card height */
+.row-equal > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.row-equal .card {
+   width: 100%;
+}
+
+/* 
+FLASHCARD MANAGER
+=================================================================  
+*/
+
+.edit-flashcards {
+    width: 100%;
+    max-height: 2000px;
+    overflow: auto;
+}
+
+
+.edit-flashcards .flashcard-wrapper {
+    widows: 100%;
+}
+
+.edit-flashcards .flashcard-wrapper.active {
+    background: #eee;
+}
+.edit-flashcards .flashcard-wrapper  .card-no {
+    display:block;
+    float: left;
+    padding: 0.5rem;
+    color: #444;
+}
+
+.edit-flashcards .flashcard-wrapper .front,
+.edit-flashcards .flashcard-wrapper .back
+{
+    width: 16rem;
+    height: 22rem;
+    float: left;
+}
+
+.edit-flashcards .flashcard-wrapper .front .card,
+.edit-flashcards .flashcard-wrapper .back .card {
+    height: 100%;
+    width: 100%;
+}
+
+.edit-flashcards .flashcard-wrapper .card .card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.edit-flashcards .toolbox {
+    padding: 0.25rem;
+    border: 1px solid #eee;
+    border-radius: 0.25rem;
+    float: left;
+    width: 3rem;
+    display: none; /* Hidden by default */
+}
+
+.edit-flashcards .toolbox.active {
+    display: block;
+}
+
+.edit-flashcards .toolbox button {
+    margin-top: 0.5rem;
+}

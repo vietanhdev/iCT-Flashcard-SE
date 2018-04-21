@@ -1,0 +1,154 @@
+<div class="my-3 p-3 bg-white rounded box-shadow">
+    <ul class="nav nav-tabs mb-1">
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:void" onclick="NaviGoto('view-card-collection')">Xem</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="javascript:void">Chỉnh sửa</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:void" onclick="NaviGoto('review-card-collection')">Ôn tập</a>
+        </li>
+    </ul>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card-collection-info-wrapper mb-3" style="position: relative;">
+                <img src="assets/images/placeholder333x333.png" class="rounded img-thumbnail" style="max-width: 10rem">
+                <button class="btn btn-light" style="position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            opacity: 0.8;">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    Thay đổi
+                </button>
+            </div>
+
+            <input class="form-control" type="text" placeholder="Tên gói flashcard">
+            <input class="form-control mt-1" type="text" placeholder="Mô tả ngắn">
+            <button class="btn btn-primary mt-1">
+                Lưu lại chỉnh sửa
+            </button>
+        
+        </div>
+    
+        <div class="col-md-9 col-md-offset-1">
+            <form>
+                <h3 class="border-bottom border-gray mb-3">Chỉnh sửa gói flashcard</h3>
+                
+                <div class="edit-flashcards">
+
+                    <div class="flashcard-wrapper active">
+                        <h2 class="card-no">1</h2>
+                        <div class="front p-1">
+                            <div class="card">
+                                <div style="position: relative;">
+                                    <img class="card-img-top" src="assets/flashcard-images/frog.jpg" alt="Card image">
+                                    <button class="btn btn-light" style="position: absolute;
+                                                bottom: 0;
+                                                left: 0;
+                                                opacity: 0.5;">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        Thay hình
+                                    </button>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <input type="text" class="form-control" placeholder="Từ vựng">
+                                    <input type="text" class="form-control mt-1" placeholder="Phát âm">
+                                </div>
+                                <div flashcard="#fc-0" class="card-footer text-muted flip-card-btn">
+                                    Mặt trước
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back p-1">
+                            <div class="card">
+                                <div class="card-body">
+                                        <textarea class="form-control" rows="9" placeholder="Ý nghĩa"></textarea>
+                                </div>
+                                <div flashcard="#fc-1" class="card-footer text-muted flip-card-btn">
+                                    Mặt sau
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbox active">
+                            <button class="btn btn-success">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </button>
+                            <button class="delete btn btn-danger">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-info">
+                                    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-info">
+                                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </div>
+
+                    <div class="flashcard-wrapper">
+                        <h2 class="card-no">2</h2>
+                        <div class="front p-1">
+                            <div class="card">
+                                <div style="position: relative;">
+                                    <img class="card-img-top" src="assets/flashcard-images/frog.jpg" alt="Card image">
+                                    <button class="btn btn-light" style="position: absolute;
+                                                bottom: 0;
+                                                left: 0;
+                                                opacity: 0.5;">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        Thay hình
+                                    </button>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <input type="text" class="form-control" placeholder="Từ vựng">
+                                    <input type="text" class="form-control mt-1" placeholder="Phát âm">
+                                </div>
+                                <div flashcard="#fc-0" class="card-footer text-muted flip-card-btn">
+                                    Mặt trước
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back p-1">
+                            <div class="card">
+                                <div class="card-body">
+                                        <textarea class="form-control" rows="9" placeholder="Ý nghĩa"></textarea>
+                                </div>
+                                <div flashcard="#fc-1" class="card-footer text-muted flip-card-btn">
+                                    Mặt sau
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbox">
+                            <button class="btn btn-success">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </button>
+                            <button class="delete btn btn-danger">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-info">
+                                    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-info">
+                                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    
+                    
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="assets/js/card-collection.js
+"></script>
