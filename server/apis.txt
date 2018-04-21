@@ -1,0 +1,35 @@
+
+### DICTIONARY
+// ==================================================================
+// USER APIs FOR DICTIONARY
+/// ### E-V Dictionary
+// Lookup: /api/dictionary/ev?lookup=<word>
+
+// ==================================================================
+// USER APIs FOR USER INFO
+
+// ### User Login
+// params: {'username': '<username>', 'password', '<password>'}
+// success: return {'success': true, 'token': '<token>'}
+// fail: return {'success': false}
+
+// ### Check login state
+// params: {'username': '<username>', 'token', '<token>'}
+// success: return {'success': true, 'isLoggedIn': true}
+// fail: return {'success': false}
+
+// ### Update user info
+// params: {'username': '<username>', 'token', '<token>',
+//          'oldPassword': '<oldPassword>'
+//                'newUserInfo': {
+//                      'email'        : '<email>',
+//                      'bio'          : '<bio>',
+//                      'fullname'     : '<fullname>',
+//                      'email'        : '<email>',
+//                      'newPassword'  : '<newPassword>',
+//                 }
+//          }
+//    => 'oldPassword', 'newPassword' are used when user wants to change their password
+//    => all properties of 'newUserInfo' are optional
+// success: return {'success': true}
+// fail: return {'success': false}

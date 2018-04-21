@@ -2,6 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var fs = require('fs');
 
 // Controllers
 var UserController = require('./controllers/user');
@@ -23,6 +24,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+
+// Setup homepage
+app.get('/', function(req, res) {
+  res.sendFile('apis.txt', {root: __dirname })
+});
+
 // Create our Express router
 var router = express.Router();
 
@@ -33,6 +40,7 @@ app.use('/api/', router);
 // ==================================================================
 // USER APIs FOR DICTIONARY
 /// ### E-V Dictionary
+// Lookup: /api/dictionary/ev?lookup=<word>
 router.route('/dictionary/ev')
   .get(DictionaryController.lookup);
 
@@ -75,7 +83,7 @@ router.route('/user/updateinfo')
 
 
 // ### Start the server
-// Use environment defined port or 3000
-var port = process.env.PORT || 3000;
+// Use environment defined port or 80
+var port = process.env.PORT || 80;
 app.listen(port);
 console.log('Server is listening on port: ' + port);

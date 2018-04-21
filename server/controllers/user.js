@@ -10,7 +10,9 @@ UserController.login = function(req, res) {
     return res.json({"success": false});
   }
 
-  console.log(req.body.username, req.body.password);
+  // convert username to lowercase
+  req.body.username = req.body.username.toLowerCase();
+
   UserModel.login(req.body.username, req.body.password, function(resp) {
     res.json(resp);
   });
@@ -27,6 +29,9 @@ UserController.register = function(req, res) {
       "message": "Vui lòng nhập tất cả các ô được yêu cầu!"
     });
   }
+
+  // convert username to lowercase
+  req.body.username = req.body.username.toLowerCase();
 
   // Check valid for password
   if (req.body.password.length == 0
@@ -67,6 +72,9 @@ UserController.checkValidLogin = function(req, res) {
     return res.json({"success": false});
   }
 
+  // convert username to lowercase
+  req.body.username = req.body.username.toLowerCase();
+
   UserModel.checkValidLogin(req.body.username, req.body.token, function(resp) {
     res.json(resp);
   });
@@ -81,6 +89,9 @@ UserController.updateUserInfo = function(req, res) {
   ) {
     return res.json({"success": false});
   }
+
+  // convert username to lowercase
+  req.body.username = req.body.username.toLowerCase();
 
   UserModel.checkValidLogin(req.body.username, req.body.token, function(resp) {
       if (resp["success"] == false || resp["isLoggedIn"] == false ) {
